@@ -7,7 +7,6 @@ import Fab from '@material-ui/core/Fab';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import AddIcon from '@material-ui/icons/Add';
 import IconButton from '@material-ui/core/IconButton';
@@ -165,14 +164,6 @@ export default function CollaboratorDetail() {
     },
     [collaborator.id, enqueueSnackbar],
   );
-
-  if (router.isFallback) {
-    return (
-      <Box display="flex" justifyContent="center" py={2}>
-        <Typography>Loading...</Typography>
-      </Box>
-    );
-  }
 
   return (
     <Layout>
